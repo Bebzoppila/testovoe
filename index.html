@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .info {
+            font-size: 16px;
+            color: #000;
+            transition: all 0.3s;
+            display: inline-block;
+            font-family: 'Luxurious Roman', cursive;
+            padding: 0px;
+        }
+        
+        .info--show {
+            display: none;
+        }
+        
+        .info:hover {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: rgb(26, 84, 192);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="info">Илья Начинающий web-программист / Junior Frontend Developer</p>
+</body>
+<script>
+    const infoText = document.querySelector('.info')
+    document.addEventListener('click', event => {
+        infoText.classList.toggle('info--show')
+    })
+    document.addEventListener('keyup', event => {
+        if (event.code == 'Space') {
+            infoText.remove()
+        }
+    })
+</script>
+
+</html>
